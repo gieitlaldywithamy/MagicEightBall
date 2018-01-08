@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class MagicEightBall {
@@ -11,6 +12,7 @@ public class MagicEightBall {
         this.answers = new ArrayList<>();
 
     }
+
 
     public int numberOfAnswers() {
         return this.answers.size();
