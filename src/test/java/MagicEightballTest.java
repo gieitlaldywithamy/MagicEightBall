@@ -4,22 +4,27 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MagicEightballTest {
     MagicEightBall ball;
 
     @Before
     public void before(){
-        ArrayList<String> answers = new ArrayList<String>();
-        answers.add("Absolutely 100% yes!");
-        answers.add("Naw");
-        answers.add("Get some perspective");
-        ball = new MagicEightBall(answers);
+        ball = new MagicEightBall();
+        ball.addAnswer("Absolutely 100% yes!");
+        ball.addAnswer("Naw");
+        ball.addAnswer("Get some perspective");
     }
 
     @Test
     public void ballHasThreeAnswers(){
         assertEquals(3, ball.numberOfAnswers());
+    }
+
+    @Test
+    public void ballReturnsRandomAnswer(){
+        assertTrue(ball.getAnswers().contains(ball.randomAnswer()));
     }
 
 }
