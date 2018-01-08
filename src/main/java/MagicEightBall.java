@@ -30,4 +30,8 @@ public class MagicEightBall {
     public ArrayList<String> getAnswers() {
         return this.answers;
     }
+
+    public void removeAnswer(String answer){
+        this.answers.remove(answer);
+    }
 }

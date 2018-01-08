@@ -27,4 +27,10 @@ public class MagicEightballTest {
         assertTrue(ball.getAnswers().contains(ball.randomAnswer()));
     }
 
+    @Test
+    public void removeAnswer(){
+        ball.removeAnswer("Naw");
+        assertEquals(2, ball.numberOfAnswers());
+    }
+
 }
